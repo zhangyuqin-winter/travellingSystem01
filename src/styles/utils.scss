@@ -1,0 +1,9 @@
+//隐藏输入框中的数字微调器，使其在WebKit浏览器中不可见
+.hide-el-input-number-spinner:deep(input) {
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
