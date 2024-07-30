@@ -1,0 +1,330 @@
+/* 全局样式 */
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.icon {
+  width: 5em;
+  height: 5em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: beige;
+}
+
+/* 导航栏首页图标 */
+.choice1 {
+  width: 80px;
+  margin-right: 10px;
+  height: 50px;
+  font-size: 20px;
+}
+
+/* 导航栏更多图标 */
+.choice2 {
+  width: 80px;
+  margin-right: 10px;
+  height: 50px;
+  font-size: 20px;
+}
+
+/* 首页 */
+.whole {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* 首页文字 */
+.content {
+  position: absolute;
+  margin-top: 40px;
+  justify-content: center;
+  width: 80%;
+  height: 50vh;
+  color: white;
+  margin-left: 50px;
+}
+
+/* 首页登录按钮 */
+.content .bottom {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* 登录注册页 */
+.table {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  background: linear-gradient(200deg, #6481eb, #a9c1ed);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 背景 */
+.container {
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table .donghua li {
+  position: absolute;
+  border: 1px solid #fff;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+
+.square {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.square ul {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  transform: translate(-10%, -10%);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.square li {
+  top: 20vh;
+  left: 20vw;
+  animation: square 10s linear infinite;
+}
+
+.square li:nth-child(2) {
+  top: 40vh;
+  left: 15vw;
+  animation-delay: 2s;
+}
+
+.square li:nth-child(3) {
+  top: 60vh;
+  left: 25vw;
+  animation-delay: 3s;
+}
+
+.square li:nth-child(4) {
+  top: 80vh;
+  left: 20vw;
+  animation-delay: 4s;
+}
+
+.square li:nth-child(5) {
+  top: 95vh;
+  left: 30vw;
+  animation-delay: 5s;
+}
+
+.square li:nth-child(6) {
+  top: 20vh;
+  left: 90vw;
+  animation-delay: 3s;
+}
+
+.square li:nth-child(7) {
+  top: 40vh;
+  left: 98vw;
+  animation-delay: 2s;
+}
+
+.square li:nth-child(8) {
+  top: 80vh;
+  left: 95vw;
+  animation-delay: 1s;
+}
+
+@keyframes square {
+  0% {
+    transform: scale(0) rotateY('0deg');
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(3) rotateY(360deg);
+  }
+
+  100% {
+    transform: scale(5) rotateY('1000deg');
+    opacity: 0;
+  }
+}
+
+
+.login-item {
+  display: flex;
+  height: 400px;
+  /* background-color: white; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-item .loginLeft {
+  width: 380px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-item .loginLeft span {
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+
+.login-item .loginRight {
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+}
+
+.login-item .loginRight .el-input {
+  margin-top: 20px;
+}
+
+.login-item .loginRight .el-input__wrapper {
+  padding: 7px;
+}
+
+.login-item .loginRight .el-button {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.login-item .loginRight .otherChoices {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.login-item .loginRight .otherChoices .othterChoices-title {
+  color: #9198A4;
+  font-size: 12px;
+}
+
+/* 分割线：左边，绝对定位实现 */
+.login-item .loginRight .otherChoices .othterChoices-title::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 124px;
+  height: 1px;
+  background-color: #eee;
+}
+
+.login-item .loginRight .otherChoices .othterChoices-title::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 124px;
+  height: 1px;
+  background-color: #eee;
+}
+
+.login-item .loginRight .otherChoices ul {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 20px;
+  width: 180px;
+}
+
+.login-item .loginRight .otherChoices ul li div {
+  width: 25px;
+  height: 25px;
+  background-color: #F6F6F8;
+  /* 背景圆角，形成一个圆形 */
+  border-radius: 50%;
+  /* 使背景圆包裹图标 */
+  padding: 5px;
+}
+
+/* 右边注册页 */
+.registerCode {
+  position: relative;
+}
+
+.registerCode .el-link {
+  position: absolute;
+  font-size: 16px;
+  right: 18px;
+  top: 50%;
+}
+
+.agreement {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 页面头部 */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 1px 3px #ddd;
+}
+
+.appheader {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  min-width: 1000px;
+  margin: auto;
+}
+
+.el-container .el-header {
+  padding: 0px;
+}
+
+.el-header .el-menu--horizontal.el-menu {
+  border: 0;
+  width: 530px;
+  margin-left: 25px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
